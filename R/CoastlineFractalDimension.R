@@ -123,7 +123,7 @@ Boxes_Function = function (path, netPath, n, pearsonValue) {
 #'
 #' @description Calculate the Coastline Fractal Dimension
 #'
-#' @usage FD(DinputPath, BinputPath, netPath, outputPath, year, r, pearsonValue, showFlag)
+#' @usage FD(DinputPath, BinputPath, netPath, outputPath, year, r, pearsonValue, writeF, showF)
 #'
 #' @param DinputPath    All density shoreline files path
 #' @param BinputPath    All origin shoreline files path
@@ -132,7 +132,8 @@ Boxes_Function = function (path, netPath, n, pearsonValue) {
 #' @param year          R vector object, which represent your study time
 #' @param r             R vector object, which represent your study scale
 #' @param pearsonValue  The Pearson coefficient of your input data
-#' @param showFlag      Drawing Function's result
+#' @param writeF        Exporting Function's result
+#' @param showF         Drawing Function's result
 #'
 #' @returns An .xlsx file containing the results of the fractal dimension calculation, and a fractal dimension graph
 #'
@@ -164,12 +165,13 @@ Boxes_Function = function (path, netPath, n, pearsonValue) {
 #'   c(1985:1986),
 #'   c(300, 600, 900, 1000, 1050, 1100),
 #'   0.00,
+#'   FALSE,
 #'   TRUE
 #' )
 #'
 
 # Calculating final results
-FD = function (DinputPath, BinputPath, netPath, outputPath, year, r, pearsonValue, showFlag) {
+FD = function (DinputPath, BinputPath, netPath, outputPath, year, r, pearsonValue, writeF, showF) {
 
   my_data_D = list.files(path = DinputPath,
                          pattern = "*.shp$",
@@ -205,10 +207,12 @@ FD = function (DinputPath, BinputPath, netPath, outputPath, year, r, pearsonValu
     "DividersFD" = DividersResults,
     "BoxesFD" = BoxesResults
   )
-  write_xlsx(FractalDimension, outputPath)
 
-  if (showFlag) {
+  if (writeF) {
+    write_xlsx(FractalDimension, outputPath)
+  }
 
+  if (showF) {
     tmp = FractalDimension %>% pivot_longer(cols = 2:3, names_to = "type", values_to = "FD")
     tmp %>% ggplot(aes(Year, FD, col = type, group = type)) +
       geom_line(color = "black") +

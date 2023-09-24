@@ -1,7 +1,7 @@
-1d4bf05276c99f29d55c231cad9515b2 *DESCRIPTION
+3282925c0bbbe33668ae9d4be4e7e2ad *DESCRIPTION
 1fed19e2b3949d09e097047f8867fe07 *LICENSE
 7dc4bbebb8d8937bbbee5c2e61788962 *NAMESPACE
-608851e2f0f4d1149d3feeca054030db *R/CoastlineFractalDimension.R
+78b22018f650ecc22d92e0cb48237d3f *R/CoastlineFractalDimension.R
 ae3b3df9970b49b6523e608759bc957d *inst/extdata/BoxesFD/shoreline1985.CPG
 f09d3dda2f3a6b0326e22d01c8159c7b *inst/extdata/BoxesFD/shoreline1985.dbf
 59c39fffa6e992ff49efa25811457e2a *inst/extdata/BoxesFD/shoreline1985.prj
@@ -74,4 +74,4 @@ af68950877c4b0ccc94696b5b7896086 *inst/extdata/Fishnet/n1100.sbn
 0f5255a2b95ea5bdbf83092064977858 *inst/extdata/Fishnet/n1100.shp
 7a5d676c13e5747d53ac4df8f3f92ea3 *inst/extdata/Fishnet/n1100.shp.xml
 6c129b56746d7858bf0933eafe27f0be *inst/extdata/Fishnet/n1100.shx
-fc24f3054fefab9b7d17dcc5c788668a *man/FD.Rd
+201ad9429af2f163b99acd3d469889e0 *man/FD.Rd

@@ -4,7 +4,7 @@
 \alias{FD}
 \title{CoastlineFD}
 \usage{
-FD(DinputPath, BinputPath, netPath, outputPath, year, r, pearsonValue, showFlag)
+FD(DinputPath, BinputPath, netPath, outputPath, year, r, pearsonValue, writeF, showF)
 }
 \arguments{
 \item{DinputPath}{All density shoreline files path}
@@ -21,7 +21,9 @@ FD(DinputPath, BinputPath, netPath, outputPath, year, r, pearsonValue, showFlag)
 
 \item{pearsonValue}{The Pearson coefficient of your input data}
 
-\item{showFlag}{Drawing Function's result}
+\item{writeF}{Exporting Function's result}
+
+\item{showF}{Drawing Function's result}
 }
 \value{
 An .xlsx file containing the results of the fractal dimension calculation, and a fractal dimension graph
@@ -43,6 +45,7 @@ FD(
   c(1985:1986),
   c(300, 600, 900, 1000, 1050, 1100),
   0.00,
+  FALSE,
   TRUE
 )
 
