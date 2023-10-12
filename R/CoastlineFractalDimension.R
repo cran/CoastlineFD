@@ -46,14 +46,13 @@ Divider = function (line.x, line.y, line.id, r, flag) {
 Dividers_Functoin = function (path, r, pearsonValue) {
 
   # Getting required data
-  my_data_sp = readOGR(path, verbose = FALSE)
-  my_data_sf = st_as_sf(my_data_sp)
-  my_data_dataframe = fortify(my_data_sp)
+  my_data_sf = read_sf(path)
+  my_data_dataframe = sfc_to_df(my_data_sf$geometry)
 
   # Filtering required data
-  line.x = my_data_dataframe$lat
-  line.y = my_data_dataframe$long
-  line.id = my_data_dataframe$order
+  line.x = my_data_dataframe$x
+  line.y = my_data_dataframe$y
+  line.id = c(1:length(my_data_dataframe$sfg_id))
 
   # Calculating the fractal dimension
   results = vector()
@@ -139,15 +138,14 @@ Boxes_Function = function (path, netPath, n, pearsonValue) {
 #'
 #' @export
 #' @import sf
-#' @import sp
-#' @import rgdal
+#' @import tidyr
+#' @import utils
 #' @import readxl
 #' @import fields
 #' @import writexl
 #' @import ggplot2
 #' @import progress
-#' @import tidyr
-#' @import utils
+#' @import sfheaders
 #'
 #' @importFrom stats cor lm
 #'

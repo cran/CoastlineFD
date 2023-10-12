@@ -1,7 +1,7 @@
-3282925c0bbbe33668ae9d4be4e7e2ad *DESCRIPTION
+9841dc098d2800d037d1db46fd652d4f *DESCRIPTION
 1fed19e2b3949d09e097047f8867fe07 *LICENSE
-7dc4bbebb8d8937bbbee5c2e61788962 *NAMESPACE
-78b22018f650ecc22d92e0cb48237d3f *R/CoastlineFractalDimension.R
+5622d69e57aabe3c332c6fdc0b7b2fe3 *NAMESPACE
+6ca3cdb1ec385199d984f0d64fef5526 *R/CoastlineFractalDimension.R
 ae3b3df9970b49b6523e608759bc957d *inst/extdata/BoxesFD/shoreline1985.CPG
 f09d3dda2f3a6b0326e22d01c8159c7b *inst/extdata/BoxesFD/shoreline1985.dbf
 59c39fffa6e992ff49efa25811457e2a *inst/extdata/BoxesFD/shoreline1985.prj
